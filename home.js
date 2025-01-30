@@ -140,3 +140,10 @@ document.querySelector('.image-container').addEventListener('mouseenter', () => 
   document.querySelector('.image-container').addEventListener('mouseleave', () => {
     console.log('Rockets reset!');
   });
+
+function scrollToInfo() {
+    document.getElementById('info-section').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+}
+

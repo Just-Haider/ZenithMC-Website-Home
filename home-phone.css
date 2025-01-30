@@ -1,0 +1,234 @@
+/* General Mobile Styles */
+@media (max-width: 832px) {
+    /* Adjust global styles for mobile */
+    * {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Navbar adjustments */
+    .nav-container {
+        padding: 10px 20px; /* Reduce padding */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to the left */
+    }
+
+    .img-h2 {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center; /* Align to the left */
+    }
+
+    .img-h2 img {
+        width: 40px; /* Smaller logo */
+        height: 40px;
+        margin-right: 0; /* Remove margin */
+        margin-bottom: 10px; /* Add space below logo */
+    }
+
+    .img-h2 h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    header ul {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap; /* Allow menu items to wrap */
+        gap: 10px; /* Add space between menu items */
+    }
+
+    header ul li {
+        margin-right: 0; /* Remove margin */
+        padding: 8px 12px; /* Smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    /* Hero section adjustments */
+    .hero-section {
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px; /* Reduce padding */
+        height: auto; /* Auto height */
+    }
+
+    .hero-content {
+        max-width: 100%; /* Full width */
+        text-align: center; /* Center text */
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem; /* Smaller heading */
+    }
+
+    .server-ip {
+        font-size: 1.5rem; /* Smaller server IP text */
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add space between buttons */
+        align-items: center; /* Center align buttons horizontally */
+    }
+
+    .copy-ip,
+    .show-more {
+        width: auto; /* Auto width for better sizing */
+        padding: 10px 20px; /* Adjust padding for both buttons */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .show-more{
+        position: relative;
+        left: -5px;
+    }
+
+    .notification {
+        top: 275px; /* Adjust notification position */
+        left: 50%; /* Center notification */
+        transform: translateX(-50%); /* Center horizontally */
+    }
+
+    /* Server info adjustments */
+    .server-info {
+        flex-direction: column; /* Stack info boxes vertically */
+        gap: 10px; /* Add space between boxes */
+        bottom: 10px; /* Adjust position */
+        top: 735px;
+    }
+
+    .info-box {
+        min-width: 150px; /* Smaller width */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .info-box img {
+        width: 20px; /* Smaller icons */
+        height: 20px;
+    }
+
+    /* Info section adjustments */
+    .info {
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .info .text {
+        margin-right: 0; /* Remove margin */
+        text-align: center; /* Center text */
+    }
+
+    .info h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .info p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+
+    .image-container {
+        width: 100%; /* Full width */
+        margin-right: 0; /* Remove margin */
+    }
+
+    .main-image {
+        width: 100%; /* Full width */
+    }
+
+    .rockets {
+        display: none; /* Hide rockets on mobile */
+    }
+
+    /* Gamemodes section adjustments */
+    .gamemodes {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .G-1,
+    .G-2 {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center items */
+    }
+
+    .G-1 .GM-Text,
+    .G-2 .GM-Text {
+        width: 100%; /* Full width */
+        padding: 20px; /* Reduce padding */
+        text-align: center; /* Center text */
+    }
+
+    .G-1 img,
+    .G-2 img {
+        width: 100%; /* Full width */
+        margin-right: 0; /* Remove margin */
+        transform: none; /* Remove perspective */
+    }
+
+    .G-1 img:hover,
+    .G-2 img:hover {
+        transform: none; /* Remove hover effect */
+    }
+
+    /* Join Discord section adjustments */
+    .join-dc {
+        padding: 50px 20px; /* Reduce padding */
+    }
+
+    .join-discord {
+        width: 100%; /* Full width button */
+    }
+
+    /* Vote section adjustments */
+    .vote {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .vote-links {
+        flex-direction: column; /* Stack vote links vertically */
+        gap: 20px; /* Add space between links */
+    }
+
+    .link {
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
+        padding: 15px; /* Smaller padding */
+    }
+
+    .icon img {
+        width: 50px; /* Smaller icons */
+        height: 50px;
+    }
+
+    /* Footer adjustments */
+    .footer-content {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center; /* Center items */
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        text-align: center; /* Center text */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+        padding: 0; /* Remove padding */
+    }
+
+    /* Scrollbar adjustments */
+    ::-webkit-scrollbar {
+        width: 8px; /* Smaller scrollbar */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #4c0774; /* Keep scrollbar color */
+    }
+}
