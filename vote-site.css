@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Vinyl&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root {
+    --maincolor: linear-gradient(to left, #4c003e, #5a0096);
+    --textcolor: linear-gradient(to right, #d199f1, #820bd1);
+    --bodycolor: linear-gradient(to right, #180026, #820bd1);
+    --secondary-color: linear-gradient(to right, #181818, #000000);
+}
+
+.nav-container {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--maincolor); 
+    color: white;
+    padding: 12px 55px;
+    border-bottom: 2px solid rgb(136, 102, 165);
+}
+
+.img-h2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+.img-h2 h2 {
+    display: inline-block;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(39, 0, 78) 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 1s;
+}
+
+.img-h2 h2:hover {
+    background-position: -100% 0;
+    transition: background-position 1s;
+    
+}
+
+@keyframes textcover {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.img-h2 img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-h2 img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    border: none;
+    padding: 13px 15px;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+header ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px 2px rgb(125, 3, 206);
+}
+
+header ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Vote section styling */
+.vote {
+    padding: 100px 50px;
+    text-align: center;
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Vote links container */
+.vote-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Adds spacing between the vote cards */
+    padding: 40px;
+    flex-wrap: wrap; /* Allows responsiveness */
+}
+
+/* Individual vote link styling */
+.vote-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* General styling for all vote boxes */
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 20vw;
+    height: 25vh;
+    border: 2px solid #3e0074;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.link:hover {
+    transform: scale(1.05);
+    border-color: #6a00ff;
+}
+
+/* Text and icon styling inside links */
+.link h3, 
+.link p, 
+.link img {
+    margin: 5px 0;
+}
+
+.link p {
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 80%;
+}
+
+/* Vote icon animation */
+.icon img {
+    width: 80px;
+    height: 80px;
+    image-rendering: pixelated; /* Gives it a pixel-art effect */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Pixel-effect on hover */
+.icon img:hover {
+    animation: sonic-boom 1.2s infinite ease-out;
+}
+
+/* Keyframe animation for icon change */
+@keyframes sonic-boom {
+    0% { content: url("assets/images/compass/sonic_boom_1.png"); }
+    12.5% { content: url("assets/images/compass/sonic_boom_2.png"); }
+    25% { content: url("assets/images/compass/sonic_boom_3.png"); }
+    37.5% { content: url("assets/images/compass/sonic_boom_4.png"); }
+    50% { content: url("assets/images/compass/sonic_boom_5.png"); }
+    62.5% { content: url("assets/images/compass/sonic_boom_6.png"); }
+    75% { content: url("assets/images/compass/sonic_boom_7.png"); }
+    100% { content: url("assets/images/compass/sonic_boom_8.png"); }
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #282232;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #4c0774; 
+    border-radius: 10px;
+    transition: all 1s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Style the thumb when hovered (outline and glowing) */
+::-webkit-scrollbar-thumb:hover {
+    background: #5a0096; /* Lighter purple on hover */
+    border: 2px solid #fff; /* White border */
+    box-shadow: 0 0 8px 4px rgba(39, 0, 65, 0.7); /* Glowing purple effect */
+}   
+
+
+footer {
+    background: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Left, Middle, and Right Sections */
+.footer-left, 
+.footer-middle, 
+.footer-right {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Left Section (About Us) */
+.footer-left h3, 
+.footer-right h3 {
+    color: #ff00ff;
+    font-size: 18px;
+}
+
+/* Middle Section (Copyright & Email) */
+.footer-middle p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.highlight {
+    color: #ff00ff;
+    font-weight: bold;
+}
+
+.email-link {
+    color: #ff00ff;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+/* Right Section (Quick Links) */
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right li {
+    margin: 5px 0;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-right a:hover {
+    color: #ff00ff;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: right;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    gap: 15px;                /* Space between icons */
+    margin-top: 15px;
+    padding: 0 279px;
+}
+
+/* Style for each social media link */
+.social-media {
+    display: inline-block;
+    text-decoration: none;  /* Remove underline */
+    background: none;       /* No background */
+    border: none;           /* No border */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Icon styling */
+.social-media i {
+    font-size: 24px;   /* Adjust icon size */
+    color: white;      /* Make icons white */
+    transition: color 0.5s ease-in-out, transform 0.3s ease;
+}
+
+/* Hover effect */
+.social-media:hover i {
+    transform: scale(1.2);  /* Slightly enlarge on hover */
+}
+
+/* Optional: Different colors for each social icon */
+.tiktok-link i {
+    color: #ffffff; /* TikTok black */
+}
+
+.youtube-link i {
+    color: #ffffff; /* YouTube red */
+}
+
+.discord-link i {
+    color: #ffffff; /* Discord blue */
+}
+
+.twitter-link i {
+    color: #ffffff; /* Twitter blue */
+}
+
+.instagram-link i {
+    color: #ffffff; /* Instagram pink */
+}
+
+/* Hover effect to lighten the colors */
+.social-media:hover.tiktok-link i {
+    text-shadow: 
+        -2px -2px 6px #69C9D0,  /* Cyan glow */
+        2px 2px 6px #EE1D52;     /* Reddish-pink glow */
+}
+
+.social-media:hover.youtube-link i {
+    text-shadow: 0 0 6px #813a3a;  /* Red glow */
+    color: #cc0000;
+}
+
+.social-media:hover.discord-link i {
+    text-shadow: 0 0 6px #3d5177;
+    color: #7289da;
+}
+
+.social-media:hover.twitter-link i {
+    text-shadow: 0 0 6px white;
+    color: #dcf2ff;
+}
+
+.social-media:hover.instagram-link i {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #d6249f;
+}
+
+/* Media Query for Phones */
+@media (max-width: 767px) {
+    /* Adjust the navigation bar */
+    .nav-container {
+        display: flex;
+        padding: 10px 20px; /* Reduce padding */
+        flex-direction: column; /* Stack logo/heading and nav items vertically */
+        align-items: center; /* Center everything horizontally */
+    }
+
+    .img-h2 {
+        display: flex;
+        align-items: center; /* Center logo and heading vertically */
+        justify-content: center; /* Center logo and heading horizontally */
+        margin-bottom: 10px; /* Add space between logo/heading and nav items */
+    }
+
+    .img-h2 h2 {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    .img-h2 img {
+        width: 40px; /* Reduce image size */
+        height: 40px;
+        margin-right: 10px; /* Add space between logo and heading */
+    }
+
+    header ul {
+        display: flex;
+        flex-wrap: wrap; /* Allow list items to wrap to the next line if needed */
+        justify-content: center; /* Center list items horizontally */
+        padding: 0; /* Remove default padding */
+        gap: 10px; /* Add space between list items */
+    }
+
+    header ul li {
+        display: inline-block; /* Keep list items next to each other */
+        margin: 0; /* Remove margin */
+        padding: 10px; /* Adjust padding */
+        text-align: center; /* Center text inside list items */
+    }
+
+    /* Adjust the vote section */
+    .vote {
+        padding: 50px 20px; /* Reduce padding */
+    }
+
+    .vote-links {
+        flex-direction: column; /* Stack vote cards vertically */
+        gap: 20px; /* Reduce gap between cards */
+    }
+
+    .V-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link {
+        width: 80%; /* Make cards wider */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .icon img {
+        width: 60px; /* Reduce icon size */
+        height: 60px;
+    }
+
+    /* Adjust the footer */
+    .footer-content {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .footer-left, 
+    .footer-middle, 
+    .footer-right {
+        text-align: center; /* Center text */
+        margin-bottom: 20px; /* Add space between sections */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+        padding: 0; /* Remove padding */
+    }
+
+    .social-media i {
+        font-size: 20px; /* Reduce icon size */
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px; /* Reduce scrollbar width */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #4c0774; /* Keep scrollbar color */
+    }
+}

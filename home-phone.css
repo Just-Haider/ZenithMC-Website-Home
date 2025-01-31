@@ -1,5 +1,5 @@
 /* General Mobile Styles */
-@media (max-width: 832px) {
+@media (max-width: 925px) {
     /* Adjust global styles for mobile */
     * {
         font-size: 14px; /* Smaller font size for mobile */
@@ -100,7 +100,7 @@
         flex-direction: column; /* Stack info boxes vertically */
         gap: 10px; /* Add space between boxes */
         bottom: 10px; /* Adjust position */
-        top: 735px;
+        top: 235px;
     }
 
     .info-box {
