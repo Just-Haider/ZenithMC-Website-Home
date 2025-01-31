@@ -286,3 +286,70 @@ footer {
     font-size: 14px;
     color: #ccc;
 }
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px; /* Reduce gap between elements */
+        height: 100vh; /* Allow content to determine height */
+        padding: 20px 0; /* Add padding for better spacing */
+    }
+
+    .logo img {
+        width: 200px; /* Smaller logo for mobile */
+        left: 0; /* Reset left positioning */
+    }
+
+    .ip, .discord {
+        margin-top: 10px; /* Add spacing between IP and Discord sections */
+    }
+
+    .ip img, .discord img {
+        width: 50px; /* Smaller icons for mobile */
+    }
+
+    .ip-text, .discord-text {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .click-text {
+        font-size: 10px; /* Smaller click text for mobile */
+    }
+
+    .social-icons {
+        gap: 20px; /* Reduce gap between social icons */
+        top: -70px; /* Adjust positioning */
+    }
+
+    .social-media {
+        font-size: 20px; /* Smaller social icons for mobile */
+    }
+
+    footer {
+        font-size: 10px; /* Smaller footer text for mobile */
+        bottom: 10px; /* Adjust footer positioning */
+    }
+
+    /* Adjust snowflake size for mobile */
+    .snowflake {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Adjust Minecraft and Discord badges */
+    .minecraft, .discord-online {
+        font-size: 12px; /* Smaller badge text */
+        padding: 2px 8px; /* Adjust padding */
+    }
+
+    .minecraft {
+        top: -5px;
+        left: -3px;
+    }
+
+    .discord-online {
+        top: 5px;
+        right: -5px;
+    }
+}
