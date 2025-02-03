@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Vinyl&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root {
+    --maincolor: linear-gradient(to left, #4c003e, #5a0096);
+    --bodycolor: linear-gradient(to right, #180026, #820bd1);
+    --secondary-color: linear-gradient(to bottom right, #300049, #000000);
+    
+}
+
+
+
+.nav-container {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--maincolor); 
+    color: white;
+    padding: 12px 55px;
+    border-bottom: 2px solid rgb(136, 102, 165);
+}
+
+.img-h2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+.img-h2 h2 {
+    display: inline-block;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(39, 0, 78) 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 1s;
+}
+
+.img-h2 h2:hover {
+    background-position: -100% 0;
+    transition: background-position 1s;
+    
+}
+
+@keyframes textcover {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.img-h2 img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-h2 img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    border: none;
+    padding: 13px 15px;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+header ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px 2px rgb(125, 3, 206);
+}
+
+header ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+main{
+    background: url(assets/images/rules-background.png);
+    background-size: cover;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-size: 2rem;
+    flex-direction: column;
+    text-shadow: 1px 2px 7px white;
+}
+
+.logo h2 span{
+    color: #820bd1; 
+    text-shadow: 1px 2px 10px rgb(123, 1, 164);
+}
+
+.logo img {
+    top: -50px;
+    max-width: 350px;
+    animation: floatAnimation 3s infinite ease-in-out;
+    position: relative;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px) scale(1);
+        filter: drop-shadow(0px 0px 10px rgba(136, 0, 255, 0.6));
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+        filter: drop-shadow(0px 0px 20px rgba(136, 0, 255, 0.8));
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+        filter: drop-shadow(0px 0px 10px rgba(136, 0, 255, 0.6));
+    }
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #282232;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #4c0774; 
+    border-radius: 10px;
+    transition: all 1s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Style the thumb when hovered (outline and glowing) */
+::-webkit-scrollbar-thumb:hover {
+    background: #5a0096; /* Lighter purple on hover */
+    border: 2px solid #fff; /* White border */
+    box-shadow: 0 0 8px 4px rgba(39, 0, 65, 0.7); /* Glowing purple effect */
+}
+
+.rules{
+    background: var(--secondary-color);
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h2{
+    color: white;
+    padding: 50px 10px;
+}
+
+.info p{
+    color: white;
+    padding: 10px 100px;
+    text-align: center;
+}
+
+.discord{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    color: white;
+}
+

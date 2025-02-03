@@ -45,6 +45,8 @@
     background-clip: text;
     color: transparent;
     transition: background-position 1s;
+    position: relative;
+    top : -15px;
 }
 
 .img-h2 h2:hover {

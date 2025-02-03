@@ -97,10 +97,11 @@
 
     /* Server info adjustments */
     .server-info {
-        flex-direction: column; /* Stack info boxes vertically */
-        gap: 10px; /* Add space between boxes */
-        bottom: 10px; /* Adjust position */
-        top: 235px;
+        /* flex-direction: column;
+        gap: 10px;
+        bottom: 10px;
+        top: 235px; */
+        visibility: hidden;
     }
 
     .info-box {

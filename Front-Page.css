@@ -24,8 +24,8 @@ body::before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 110%;
+    width: 101%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.46);
     z-index: -1;
 }
@@ -35,7 +35,7 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     gap: 80px;
 }
 
@@ -280,7 +280,7 @@ body::before {
 
 footer {
     position: absolute;
-    bottom: 20px;
+    bottom: 55px;
     width: 100%;
     text-align: center;
     font-size: 14px;
