@@ -12,6 +12,14 @@
     --maincolor: linear-gradient(to left, #4c003e, #5a0096);
     --bodycolor: linear-gradient(to right, #180026, #820bd1);
     --secondary-color: linear-gradient(to bottom right, #300049, #000000);
+    --primary-bg: #0f172a;
+    --secondary-bg: #2b1e3b;
+    --accent-color: #c586ff;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --discord-color: #5865F2;
+    --minecraft-color: #44bd32;
+    --punishment-color: #ef4444;
     
 }
 
@@ -105,6 +113,7 @@ header ul li a {
 main{
     background: url(assets/images/rules-background.png);
     background-size: cover;
+    background-position: center center;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -173,33 +182,208 @@ main{
     box-shadow: 0 0 8px 4px rgba(39, 0, 65, 0.7); /* Glowing purple effect */
 }
 
-.rules{
-    background: var(--secondary-color);
+.info-section {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.info{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.info h2{
+.info-section h2 {
     color: white;
-    padding: 50px 10px;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
-.info p{
+.info-section p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.rules-section {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rules-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
     color: white;
-    padding: 10px 100px;
+}
+
+.rules-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.discord h2::after {
+    background-color: var(--discord-color);
+}
+
+.minecraft h2::after {
+    background-color: var(--minecraft-color);
+}
+
+.rule {
+    background-color: var(--primary-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.rule:hover {
+    transform: translateY(-2px);
+}
+
+.rule h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.rule .punishment {
+    color: var(--punishment-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.rule p {
+    color: var(--text-secondary);
+}
+
+.reports  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.reports h2::after {
+    background-color: red;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+
+.reports .text{
+    color: white;
+    padding: 25px;
+    background-color: var(--primary-bg);
+    border-radius: 0.5rem;
     text-align: center;
 }
 
-.discord{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
+.reports .text p{
+    margin-bottom: 20px;
+}
+
+.reports a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.reports button {
+    background: linear-gradient(45deg, #8001ff, #df2bff);
     color: white;
+    font-weight: bold;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(162, 103, 166, 0.4);
+}
+
+.reports button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(45deg, #9f49f6, #e75eff);
+    box-shadow: 0 6px 15px rgba(202, 43, 255, 0.6);
+}
+
+.reports button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(255, 75, 43, 0.5);
+}   
+
+.footer{
+    background: var(--secondary-bg);
+    color: white;
+    text-align: center;
+    padding: 10px ;
+}
+
+
+@media(max-width: 787px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Navbar adjustments */
+    .nav-container {
+        padding: 10px 20px; /* Reduce padding */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to the left */
+    }
+
+    .img-h2 {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center; /* Align to the left */
+    }
+
+    .img-h2 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    
+
+    header ul {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap; /* Allow menu items to wrap */
+        gap: 10px; /* Add space between menu items */
+    }
+
+    header ul li {
+        margin-right: 0; /* Remove margin */
+        padding: 8px 12px; /* Smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .logo img{
+        max-width: 250px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .logo h2 span{
+        color: #820bd1; 
+        text-shadow: 1px 2px 10px rgb(123, 1, 164);
+    }
 }
 

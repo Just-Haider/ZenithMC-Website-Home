@@ -52,6 +52,7 @@ const updateDiscordOnlineCount = async () => {
     discordElement.textContent = `Discord Online: ${onlineUsers}`;
 };
 
+
 // Call the update function to display the Discord online users
 updateDiscordOnlineCount();
 
