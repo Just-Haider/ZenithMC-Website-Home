@@ -62,30 +62,29 @@ fetch(`https://mcapi.us/server/status?ip=${serverIP}&port=${serverPort}`)
     });
 
 
-    const getDiscordOnlineUsers = async () => {
-        try {
-            const discordServerId = "1192029663879508020"; // Your Discord server ID
-    
-            const apiWidgetUrl = `https://discord.com/api/guilds/${discordServerId}/widget.json`;
-            let response = await fetch(apiWidgetUrl);
-            let data = await response.json();
-    
-            if (!data.presence_count) return "None";
-            else return data.presence_count;
-        } catch (e) {
-            return "None";
-        }
-    };
-    
-    // Function to update the Discord online user count
-    const updateDiscordOnlineCount = async () => {
-        const discordElement = document.getElementById('discordOnline');
-        const onlineUsers = await getDiscordOnlineUsers();
-    
-        // Update the span with the online user count from Discord
-        discordElement.textContent = `${onlineUsers}`;
-    };
-    
-    // Call the update function to display the Discord online users
-    updateDiscordOnlineCount();
-    
+const getDiscordOnlineUsers = async () => {
+    try {
+        const discordServerId = "1192029663879508020"; // Your Discord server ID
+
+        const apiWidgetUrl = `https://discord.com/api/guilds/${discordServerId}/widget.json`;
+        let response = await fetch(apiWidgetUrl);
+        let data = await response.json();
+
+        if (!data.presence_count) return "None";
+        else return data.presence_count;
+    } catch (e) {
+        return "None";
+    }
+};
+
+// Function to update the Discord online user count
+const updateDiscordOnlineCount = async () => {
+    const discordElement = document.getElementById('discordOnline');
+    const onlineUsers = await getDiscordOnlineUsers();
+
+    // Update the span with the online user count from Discord
+    discordElement.textContent = `${onlineUsers}`;
+};
+
+// Call the update function to display the Discord online users
+updateDiscordOnlineCount();

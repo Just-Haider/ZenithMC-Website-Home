@@ -24,7 +24,7 @@
     justify-content: space-between;
     background: var(--maincolor); 
     color: white;
-    padding: 12px 55px;
+    padding: 0px 55px;
     border-bottom: 2px solid rgb(136, 102, 165);
 }
 
@@ -540,21 +540,21 @@ header ul li a {
 }
 
 
-::-webkit-scrollbar {
-    width: 13px;
-    height: 12px;
-}
+    ::-webkit-scrollbar {
+        width: 13px;
+        height: 12px;
+    }
 
-::-webkit-scrollbar-track {
-    background: #282232;
-}
+    ::-webkit-scrollbar-track {
+        background: #282232;
+    }
 
 
-::-webkit-scrollbar-thumb {
-    background: #4c0774; 
-    border-radius: 10px;
-    transition: all 1s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
+    ::-webkit-scrollbar-thumb {
+        background: #4c0774; 
+        border-radius: 10px;
+        transition: all 1s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    }
 
 /* Style the thumb when hovered (outline and glowing) */
 ::-webkit-scrollbar-thumb:hover {

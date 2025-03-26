@@ -32,7 +32,7 @@
     justify-content: space-between;
     background: var(--maincolor); 
     color: white;
-    padding: 12px 55px;
+    padding: 1px 55px;
     border-bottom: 2px solid rgb(136, 102, 165);
 }
 

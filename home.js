@@ -9,7 +9,7 @@ document.querySelectorAll('.particle').forEach(particle => {
 
 
 
-const serverIP = 'zenithmc.fun'; // Replace with your Minecraft server's IP address
+const serverIP = 'server_ip'; // Replace with your Minecraft server's IP address
 const serverPort = 25565; // Default Minecraft port
 
 // Make a request to the Minecraft Server Status API
